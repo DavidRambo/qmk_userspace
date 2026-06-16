@@ -74,9 +74,9 @@ const uint16_t PROGMEM esc_combo[]  = {KC_D, KC_W, COMBO_END};
 const uint16_t PROGMEM ent_combo[]  = {KC_P, KC_COMM, COMBO_END};
 const uint16_t PROGMEM lpar_combo[] = {HOME_T, HOME_E, COMBO_END};
 const uint16_t PROGMEM rpar_combo[] = {HOME_S, HOME_I, COMBO_END};
-const uint16_t PROGMEM kc_m_combo[]  = {KC_X, KC_C, COMBO_END}; // For quick "m" access in gaming layer.
-const uint16_t PROGMEM kc_g_combo[]  = {KC_Z, KC_X, COMBO_END}; // For quick "g" access in gaming layer.
-const uint16_t PROGMEM kc_i_combo[]  = {KC_C, KC_V, COMBO_END}; // For quick "i" access in gaming layer.
+const uint16_t PROGMEM kc_m_combo[] = {KC_X, KC_C, COMBO_END}; // For quick "m" access in gaming layer.
+const uint16_t PROGMEM kc_g_combo[] = {KC_Z, KC_X, COMBO_END}; // For quick "g" access in gaming layer.
+const uint16_t PROGMEM kc_i_combo[] = {KC_C, KC_V, COMBO_END}; // For quick "i" access in gaming layer.
 
 combo_t key_combos[] = {
     COMBO(esc_combo, KC_ESC),
@@ -248,6 +248,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
+/* [_SAMPLE] = LAYOUT(
+ _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+ _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+ _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+ _______, _______, _______, _______, _______, _______,  _______,  _______,  _______, _______, _______, _______, _______, _______,
+                           _______, _______, _______,  _______,    _______,  _______, _______, _______
+) */
+
+// clang-format on
+
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
@@ -269,36 +279,28 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 #endif
 
- /* [_SAMPLE] = LAYOUT(
-  _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,  _______,  _______,  _______, _______, _______, _______, _______, _______,
-                            _______, _______, _______,  _______,    _______,  _______, _______, _______
-) */
-
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case UPDIR:
-        if (record ->event.pressed) {
+            if (record->event.pressed) {
                 send_string("../");
             }
-        return false;
+            return false;
         case ZT:
-        if (record ->event.pressed) {
+            if (record->event.pressed) {
                 send_string("zt");
             }
-        return false;
+            return false;
         case ZZ:
-        if (record ->event.pressed) {
+            if (record->event.pressed) {
                 send_string("zz");
             }
-        return false;
+            return false;
         case ZB:
-        if (record ->event.pressed) {
+            if (record->event.pressed) {
                 send_string("zb");
             }
-        return false;
+            return false;
     }
     return true;
 }
