@@ -19,12 +19,12 @@
 
 #define MASTER_RIGHT
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
-#define CAPS_WORD_IDLE_TIMEOUT 5000  // 5 seconds.
+#define CAPS_WORD_IDLE_TIMEOUT 5000 // 5 seconds.
 
 #define TAPPING_TERM 190
 #define QUICK_TAP_TERM 100
 #define FLOW_TAP_TERM 150
 
 #ifdef RGB_MATRIX_ENABLE
-    #define RGB_DISABLE_WHEN_USB_SUSPENDED  // turn off effects when suspended
+#    define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
 #endif
