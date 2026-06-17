@@ -70,7 +70,7 @@ enum custom_keycodes {
 #define CTLPGUP LCTL(KC_PGUP)
 
 // Combos
-const uint16_t PROGMEM esc_combo[]  = {KC_D, KC_W, COMBO_END};
+const uint16_t PROGMEM esc_combo[]  = {KC_L, KC_W, COMBO_END};
 const uint16_t PROGMEM ent_combo[]  = {KC_P, KC_COMM, COMBO_END};
 const uint16_t PROGMEM lpar_combo[] = {HOME_T, HOME_E, COMBO_END};
 const uint16_t PROGMEM rpar_combo[] = {HOME_S, HOME_I, COMBO_END};
