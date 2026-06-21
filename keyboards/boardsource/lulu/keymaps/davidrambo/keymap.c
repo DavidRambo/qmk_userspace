@@ -78,6 +78,7 @@ const uint16_t PROGMEM kc_m_combo[] = {KC_X, KC_C, COMBO_END}; // For quick "m" 
 const uint16_t PROGMEM kc_g_combo[] = {KC_Z, KC_X, COMBO_END}; // For quick "g" access in gaming layer.
 const uint16_t PROGMEM kc_i_combo[] = {KC_C, KC_V, COMBO_END}; // For quick "i" access in gaming layer.
 
+// clang-format off
 combo_t key_combos[] = {
     COMBO(esc_combo, KC_ESC),
     COMBO(ent_combo, KC_ENT),
@@ -89,8 +90,6 @@ combo_t key_combos[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-    // clang-format off
 
 /* Gralmak Base Layer
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -241,7 +240,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_FKEYS] = LAYOUT(
   QK_BOOT, _______, _______, _______, _______, _______,                      QK_BOOT, _______, _______, _______, _______, TO(1)  ,
-  _______, _______, RM_VALD, RM_SATD, RM_HUEU, RM_NEXT,                      _______, _______, _______, _______, _______, TO(2)  ,
+  _______, _______, RM_VALD, RM_SATD, RM_HUED, RM_NEXT,                      _______, _______, _______, _______, _______, TO(2)  ,
   _______, _______, RM_VALU, RM_SATU, RM_HUEU, RM_TOGG,                      _______, _______, _______, _______, _______, TO(0)  ,
   _______, _______, _______, KC_VOLD, KC_VOLU, KC_MPLY,  _______,  _______,  UC_NEXT, _______, _______, _______, _______, _______,
                             _______, _______, _______,  _______,    _______,  _______, _______, _______
