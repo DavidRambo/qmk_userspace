@@ -70,13 +70,17 @@ enum custom_keycodes {
 #define CTLPGUP LCTL(KC_PGUP)
 
 // Combos
-const uint16_t PROGMEM esc_combo[]  = {KC_L, KC_W, COMBO_END};
-const uint16_t PROGMEM ent_combo[]  = {KC_P, KC_COMM, COMBO_END};
-const uint16_t PROGMEM lpar_combo[] = {HOME_T, HOME_E, COMBO_END};
-const uint16_t PROGMEM rpar_combo[] = {HOME_S, HOME_I, COMBO_END};
-const uint16_t PROGMEM kc_m_combo[] = {KC_X, KC_C, COMBO_END}; // For quick "m" access in gaming layer.
-const uint16_t PROGMEM kc_g_combo[] = {KC_Z, KC_X, COMBO_END}; // For quick "g" access in gaming layer.
-const uint16_t PROGMEM kc_i_combo[] = {KC_C, KC_V, COMBO_END}; // For quick "i" access in gaming layer.
+const uint16_t PROGMEM esc_combo[]   = {KC_L, KC_W, COMBO_END};
+const uint16_t PROGMEM ent_combo[]   = {KC_P, KC_COMM, COMBO_END};
+const uint16_t PROGMEM lpar_combo[]  = {HOME_T, HOME_E, COMBO_END};
+const uint16_t PROGMEM rpar_combo[]  = {HOME_S, HOME_I, COMBO_END};
+const uint16_t PROGMEM lsqbr_combo[] = {KC_M, KC_DOT, COMBO_END};
+const uint16_t PROGMEM rsqbr_combo[] = {KC_C, KC_SLASH, COMBO_END};
+const uint16_t PROGMEM lcurl_combo[] = {KC_D, KC_U, COMBO_END};
+const uint16_t PROGMEM rcurl_combo[] = {KC_W, KC_J, COMBO_END};
+const uint16_t PROGMEM kc_g_combo[]  = {KC_Z, KC_X, COMBO_END}; // For quick "g" access in gaming layer.
+const uint16_t PROGMEM kc_m_combo[]  = {KC_X, KC_C, COMBO_END}; // For quick "m" access in gaming layer.
+const uint16_t PROGMEM kc_i_combo[]  = {KC_C, KC_V, COMBO_END}; // For quick "i" access in gaming layer.
 
 // clang-format off
 combo_t key_combos[] = {
@@ -84,6 +88,10 @@ combo_t key_combos[] = {
     COMBO(ent_combo, KC_ENT),
     COMBO(lpar_combo, KC_LPRN),
     COMBO(rpar_combo, KC_RPRN),
+    COMBO(lsqbr_combo, KC_LBRC),
+    COMBO(rsqbr_combo, KC_RBRC),
+    COMBO(lcurl_combo, KC_LCBR),
+    COMBO(rcurl_combo, KC_RCBR),
     COMBO(kc_m_combo, KC_M),
     COMBO(kc_g_combo, KC_G),
     COMBO(kc_i_combo, KC_I),
