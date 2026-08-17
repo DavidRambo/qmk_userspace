@@ -21,7 +21,7 @@
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX UNICODE_MODE_MACOS
 
 enum custom_layers {
-    _GRALMAK,
+    _GRAPHITE,
     _RL, // Layer for roguelikes, pairs with a numpad on _NAVRL
     _GAME,
     _SYMBOL,
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 
- [_GRALMAK] = LAYOUT(
+ [_GRAPHITE] = LAYOUT(
   KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,  KC_7,    KC_8,    KC_9,    KC_0,    KC_MPLY,
   KC_TAB,   KC_B,   KC_L,    KC_D,    KC_W,    KC_Z,                     KC_QUOT,KC_F,   KC_O,    KC_U,    KC_J,    KC_BSPC,
   ESCNAV,   HOME_N, HOME_R,  HOME_T,  HOME_S,  KC_G,                     KC_Y,  HOME_H,  HOME_A,  HOME_E,  HOME_I,  KC_SCLN,
